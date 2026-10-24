@@ -41,6 +41,33 @@ What the agent did:
   this repo as a fresh history with all of those removed or turned into environment variables.
 - **Comment:** added a comment to the post with the GitHub link and these prompts.
 
+## 4. Add a narrator
+
+> video ขอเสียง บรรยาย ให้เหมือนเสียงคนจริงๆ ได้ใหม
+
+> can ve user https://elevenlabs.io/voices/7XW5JhaNn90bnFojQ5DA voice from elevenlabs , add quiet background
+
+> you can automate by chrome like fb post
+
+> ขอเสียงผู้ชายดีกว่า xYmBpJREC3WfqEFpbPvO https://elevenlabs.io/voices/xYmBpJREC3WfqEFpbPvO
+
+What the agent did:
+
+- **Why the website:** the ElevenLabs free plan blocks library voices over the API, so the agent drove the
+  ElevenLabs website instead, in the same logged-in browser it uses for Facebook. The script is
+  [`promo/poster/elevenlabs-tts.js`](../promo/poster/elevenlabs-tts.js).
+- **Voice:** generated the narration ([`promo/video/narration.txt`](../promo/video/narration.txt)) with the
+  "Songkran - Calm & Humble" voice on Eleven v4.
+- **Timing:** found the pauses between lines and re-timed each scene to start with its line.
+- **Music:** made a quiet ukulele and piano bed with ElevenLabs sound generation and mixed it about 17 dB under
+  the voice.
+
+## 5. Publish
+
+> post it with public
+
+Voice and music: [ElevenLabs](https://elevenlabs.io).
+
 ## Reproducing the post
 
 ```bash
