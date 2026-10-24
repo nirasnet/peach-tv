@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Peach Remote Agent</string>
+    <string name="service_description">Lets the Look Peach Family phone app check this TV, turn it off, lock it and take a snapshot.</string>
+</resources>

@@ -1,0 +1,5 @@
+.pairing.json
+build/
+app/build/
+.gradle/
+local.properties

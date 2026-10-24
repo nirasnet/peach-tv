@@ -1,0 +1,13 @@
+{
+  "name": "fb-poster",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "login": "node login.js",
+    "post": "node post.js"
+  },
+  "dependencies": {
+    "playwright": "^1.48.0"
+  }
+}

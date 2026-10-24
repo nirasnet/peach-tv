@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="th" data-resolution="square">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1080" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;600;800&display=block" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      :root {
+        --ground: #160c0a;
+        --ink: #fff4ee;
+        --muted: #c9a99a;
+        --peach: #ffb38a;
+        --hot: #ff7a59;
+        --font-display: "Prompt", sans-serif;
+      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body {
+        width: 1080px; height: 1080px; overflow: hidden;
+        background: var(--ground);
+      }
+      #root {
+        position: relative; width: 100%; height: 100%;
+        font-family: var(--font-display); color: var(--ink);
+        background: radial-gradient(circle at 50% 35%, #3a1d15 0%, var(--ground) 65%);
+      }
+      .clip { position: absolute; inset: 0; }
+      .scene { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 36px; }
+
+      .kicker { font-size: 34px; font-weight: 600; color: var(--peach); letter-spacing: 0.04em; }
+      .big { font-size: 92px; font-weight: 800; line-height: 1.1; text-align: center; letter-spacing: -0.02em; }
+      .big em { font-style: normal; color: var(--hot); }
+
+      .tv {
+        width: 940px; aspect-ratio: 16 / 9; border-radius: 22px; overflow: hidden;
+        border: 14px solid #0b0b0b; box-shadow: 0 30px 80px rgba(0,0,0,.6), 0 0 0 2px #2a2a2a;
+        background: #000;
+      }
+      .tv img { width: 100%; height: 100%; object-fit: cover; display: block; }
+      .tag {
+        display: inline-flex; align-items: center; gap: 14px;
+        padding: 14px 30px; border-radius: 999px; font-size: 40px; font-weight: 600;
+        background: var(--peach); color: #2a120b;
+      }
+      .caption { font-size: 38px; color: var(--muted); text-align: center; }
+
+      .phone-row { display: flex; align-items: center; gap: 56px; padding: 0 70px; }
+      .phone {
+        width: 360px; height: 783px; border-radius: 56px; overflow: hidden; flex: none;
+        border: 12px solid #0b0b0b; box-shadow: 0 30px 80px rgba(0,0,0,.6), 0 0 0 2px #333;
+      }
+      .phone img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
+      .points { display: flex; flex-direction: column; gap: 34px; }
+      .point { font-size: 44px; font-weight: 600; line-height: 1.25; }
+      .point small { display: block; font-size: 30px; font-weight: 400; color: var(--muted); margin-top: 6px; }
+
+      .logo { font-size: 140px; }
+      .url { font-size: 60px; font-weight: 800; color: var(--peach); }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="16" data-width="1080" data-height="1080">
+
+      <!-- 1. Hook -->
+      <section id="s1" class="clip scene" data-start="0" data-duration="2.6">
+        <div class="kicker" id="s1k">กำลังเป็นกระแส 🔥 CleanYourTV</div>
+        <div class="big" id="s1t">ทีวีบ้านเรา<br /><em>ไปต่ออีกขั้น</em></div>
+      </section>
+
+      <!-- 2. Parent mode -->
+      <section id="s2" class="clip scene" data-start="2.6" data-duration="3">
+        <div class="tag" id="s2tag">👪 Parent mode</div>
+        <div class="tv" id="s2tv"><img src="assets/tv-parent.jpg" alt="" /></div>
+        <div class="caption" id="s2c">ผู้ใหญ่เห็นทุกแอป · หน้าโฮมสะอาด ไม่มีโฆษณา</div>
+      </section>
+
+      <!-- 3. Kid mode -->
+      <section id="s3" class="clip scene" data-start="5.6" data-duration="3">
+        <div class="tag" id="s3tag">🧸 Kid mode</div>
+        <div class="tv" id="s3tv"><img src="assets/tv-kids.jpg" alt="" /></div>
+        <div class="caption" id="s3c">ลูกเห็นเฉพาะแอปที่พ่อแม่อนุญาต</div>
+      </section>
+
+      <!-- 4. Lock -->
+      <section id="s4" class="clip scene" data-start="8.6" data-duration="2.8">
+        <div class="tag" id="s4tag">🔒 Lock screen</div>
+        <div class="tv" id="s4tv"><img src="assets/tv-lock.jpg" alt="" /></div>
+        <div class="caption" id="s4c">ล็อกจอพร้อมข้อความ · ตั้งเวลาดูทีวีได้</div>
+      </section>
+
+      <!-- 5. iPhone app -->
+      <section id="s5" class="clip scene" data-start="11.4" data-duration="2.8">
+        <div class="phone-row">
+          <div class="phone" id="s5p"><img src="assets/iphone-main.png" alt="" /></div>
+          <div class="points">
+            <div class="point" id="s5a">📱 คุมทีวีจาก iPhone<small>ปิด · ล็อก · ส่งข้อความ · ดูจอ</small></div>
+            <div class="point" id="s5b">🛡️ Built-in VPN<small>อยู่นอกบ้านก็สั่งได้</small></div>
+            <div class="point" id="s5c">⏰ กฎครอบครัว<small>เวลาดูทีวี + จำกัดชั่วโมง</small></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. End card -->
+      <section id="s6" class="clip scene" data-start="14.2" data-duration="1.8">
+        <div class="logo" id="s6l">🍑</div>
+        <div class="big" id="s6t" style="font-size: 76px">Peach TV<br />× CleanYourTV</div>
+        <div class="url" id="s6u">cleanyour.tv</div>
+      </section>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      const pop = { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" };
+      const zoom = { opacity: 1, scale: 1, duration: 0.6, ease: "power3.out" };
+
+      // 1
+      tl.fromTo("#s1k", { opacity: 0, y: 30 }, pop, 0.1);
+      tl.fromTo("#s1t", { opacity: 0, scale: 0.85 }, zoom, 0.35);
+      tl.to("#s1", { opacity: 0, duration: 0.3 }, 2.3);
+
+      // 2–4: same rhythm for each TV scene
+      [["s2", 2.6, 3], ["s3", 5.6, 3], ["s4", 8.6, 2.8]].forEach(([id, t, len]) => {
+        tl.fromTo(`#${id}tag`, { opacity: 0, y: -30 }, pop, t + 0.05);
+        tl.fromTo(`#${id}tv`, { opacity: 0, scale: 0.9 }, zoom, t + 0.1);
+        tl.fromTo(`#${id}c`, { opacity: 0, y: 30 }, pop, t + 0.45);
+        tl.to(`#${id}tv`, { scale: 1.03, duration: len - 0.9, ease: "none" }, t + 0.7);
+        tl.to(`#${id}`, { opacity: 0, duration: 0.3 }, t + len - 0.3);
+      });
+
+      // 5
+      tl.fromTo("#s5p", { opacity: 0, x: -80 }, { opacity: 1, x: 0, duration: 0.6, ease: "power3.out" }, 11.45);
+      tl.to("#s5p", { scale: 1.03, duration: 2.2, ease: "none" }, 12.0);
+      ["#s5a", "#s5b", "#s5c"].forEach((s, i) =>
+        tl.fromTo(s, { opacity: 0, x: 60 }, { opacity: 1, x: 0, duration: 0.45, ease: "power3.out" }, 11.7 + i * 0.4)
+      );
+      tl.to("#s5", { opacity: 0, duration: 0.3 }, 13.9);
+
+      // 6
+      tl.fromTo("#s6l", { opacity: 0, scale: 0.4, rotation: -20 }, { opacity: 1, scale: 1, rotation: 0, duration: 0.6, ease: "back.out(2)" }, 14.25);
+      tl.fromTo("#s6t", { opacity: 0, y: 30 }, pop, 14.45);
+      tl.fromTo("#s6u", { opacity: 0, y: 30 }, pop, 14.7);
+
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

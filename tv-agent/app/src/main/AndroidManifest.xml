@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- Only to show the name of the app on screen in the phone app. -->
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"
+        tools:ignore="QueryAllPackagesPermission" />
+
+    <uses-feature android:name="android.software.leanback" android:required="false" />
+    <uses-feature android:name="android.hardware.touchscreen" android:required="false" />
+
+    <application
+        android:label="@string/app_name"
+        android:allowBackup="false"
+        android:supportsRtl="true">
+
+        <!-- Runs the phone API. An accessibility service is restarted by the system after every boot,
+             can take screenshots (Android 11+), draw the lock screen and hold back remote keys. -->
+        <service
+            android:name=".AgentService"
+            android:label="@string/app_name"
+            android:exported="true"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/agent_service" />
+        </service>
+
+        <!-- Set or read the phone token and the TV unlock code over adb. Only the shell (and the system)
+             hold WRITE_SECURE_SETTINGS, so other apps on the TV cannot use it. -->
+        <receiver
+            android:name=".ConfigReceiver"
+            android:exported="true"
+            android:permission="android.permission.WRITE_SECURE_SETTINGS">
+            <intent-filter>
+                <action android:name="com.lookpeach.tvagent.GET" />
+                <action android:name="com.lookpeach.tvagent.SET" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Kids mode and its allowed apps, read by the Peach home screen to show only those tiles. -->
+        <provider
+            android:name=".KidsProvider"
+            android:authorities="com.lookpeach.tvagent.kids"
+            android:exported="true" />
+    </application>
+</manifest>

@@ -1,0 +1,4 @@
+PeachRemote/Generated/
+*.xcodeproj/
+build/
+Frameworks/
