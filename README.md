@@ -21,8 +21,8 @@ Three pieces work together:
    in so it can reach the TV from outside the home without a separate VPN app.
 
 `promo/` holds the scripts and the [HyperFrames](https://hyperframes.heygen.com) video used to announce the
-project on Facebook. [`docs/PROMPTS.md`](docs/PROMPTS.md) has every prompt used to build the app (GitHub Copilot
-CLI) and to make the post (Claude Code).
+project on Facebook. [`docs/PROMPTS.md`](docs/PROMPTS.md) (ภาษาไทย, [English](docs/PROMPTS.en.md)) has every
+prompt used to build the app and to make the post. Any AI coding agent works.
 
 > **Use at your own risk.** It is a hobby project for one family TV. Read [Security](#limits-tested-on-the-tv)
 > before exposing anything, and never port-forward the agent.
