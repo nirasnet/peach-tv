@@ -1,0 +1,22 @@
+🔗 โค้ดทั้งหมด (TV agent + แอป iPhone + สคริปต์โพส + ซอร์สคลิป HyperFrames)
+https://github.com/nirasnet/peach-tv
+
+🤖 Prompt ที่ใช้สั่ง AI สร้างแอปนี้ ก๊อปมาตามที่พิมพ์จริงเลยครับ ใช้ AI coding agent ตัวไหนก็ได้ (Claude Code, Copilot, Codex, Gemini CLI ฯลฯ) ขอแค่รันคำสั่งบนเครื่องได้
+
+1) ล้างทีวี: แปะ prompt ของ CleanYourTV ทั้งก้อน แล้วต่อท้ายว่า "and i want to customize to personalize our family is Look Peach Family, add gimmic or something to awasome"
+
+2) "can i remote from my phone to lock this tv or close tv via internet if only lan can tv install vpn like tailscale"
+
+3) "make tv remote app for my ip17pro which auto check is tv is online and close or lock it or snap screen"
+
+4) "can set config schedule allow time each day like 7:00 am to 20:30 pm , and screen time each day 45 min, 1 hour ,2 hour, like this can qulick enable , disable it, is anything is recomend please tell me"
+
+5) "ok default mode is kid mode show only, AIS plas app , other app hide, in iphone app add feature change mode if enable kids mode show only AIS plan,"
+
+6) "when we outside home without same wifi it need to use tailscale , but non technical from my wife it hard to config it it many step, can we do something one stop service build it of this project"
+
++ อีกราว 20 prompt (ประวัติการดู, snapshot, ธีมหน้าล็อก, TestFlight) และ prompt ที่ใช้ทำโพสนี้ ดูครบใน GitHub
+
+📖 https://github.com/nirasnet/peach-tv/blob/main/docs/PROMPTS.md
+
+🎙️ เสียงบรรยาย (Songkran) และเพลง: ElevenLabs
