@@ -237,5 +237,8 @@ node post.js --text-file ../caption.txt --audience only-me \
   --media ../peach-tv-promo.mp4 ../../docs/screens/*.jpg ../../docs/screens/*.png --dry-run
 ```
 
+มี script อื่นด้วย: `audience.js` (เปลี่ยนว่าใครเห็นโพส), `comment.js` (คอมเมนต์ใต้โพส/Reel ของตัวเอง) และ `reel.js`
+(โพส Reel ติดป้าย AI และแชร์เข้ากลุ่ม) ทุกตัวมี `--dry-run`
+
 Facebook ไม่อนุญาตให้โพสอัตโนมัติบนโปรไฟล์ส่วนตัว ใช้นานๆ ครั้งพอ selector รองรับ UI ภาษาอังกฤษและไทย และอาจพังได้เมื่อ
 Facebook เปลี่ยนหน้าตา
