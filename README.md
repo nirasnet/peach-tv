@@ -3,6 +3,9 @@
 > 🇹🇭 ต่อยอดจาก [CleanYourTV](https://github.com/Gathin23/cleanyourtv): ล้างหน้าโฮม Android TV แล้วเพิ่ม **Kid mode**,
 > **Parent mode**, **ล็อกจอ / ตั้งเวลาดูทีวี** และคุมทุกอย่างจาก **iPhone** ได้ ทั้งในบ้านและนอกบ้าน (Tailscale ฝังในแอป)
 
+> 🧑‍🏫 **อยากทำตาม?** [PROMPT.md](PROMPT.md): สอนทีละขั้น พร้อม prompt แบบ copy วางได้เลย (ล้างทีวีด้วย
+> [CleanYourTV](https://github.com/Gathin23/cleanyourtv) โดย Gathin แล้วต่อด้วยโหมดเด็ก + แอป iPhone)
+
 | Parent mode | Kid mode |
 | --- | --- |
 | ![Parent mode](docs/screens/tv-parent.jpg) | ![Kid mode](docs/screens/tv-kids.jpg) |
