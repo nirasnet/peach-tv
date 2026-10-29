@@ -6,6 +6,8 @@
 > 🧑‍🏫 **อยากทำตาม?** [PROMPT.md](PROMPT.md): สอนทีละขั้น พร้อม prompt แบบ copy วางได้เลย (ล้างทีวีด้วย
 > [CleanYourTV](https://github.com/Gathin23/cleanyourtv) โดย Gathin แล้วต่อด้วยโหมดเด็ก + แอป iPhone)
 
+> 🎬 **ดูคลิปจับมือทำ:** เพจ **จับมือ AI** บน [Facebook](https://www.facebook.com/profile.php?id=61596056038143) · [YouTube @jabmueai](https://www.youtube.com/@jabmueai) · [TikTok @jabmue.ai](https://www.tiktok.com/@jabmue.ai)
+
 | Parent mode | Kid mode |
 | --- | --- |
 | ![Parent mode](docs/screens/tv-parent.jpg) | ![Kid mode](docs/screens/tv-kids.jpg) |

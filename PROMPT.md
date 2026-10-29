@@ -1,5 +1,7 @@
 # ทำตาม: ล้างทีวี + โหมดเด็ก ด้วย AI (copy วางได้เลย)
 
+> 🎬 **ดูคลิปจับมือทำ:** เพจ **จับมือ AI** บน [Facebook](https://www.facebook.com/profile.php?id=61596056038143) · [YouTube @jabmueai](https://www.youtube.com/@jabmueai) · [TikTok @jabmue.ai](https://www.tiktok.com/@jabmue.ai)
+
 ภาษาไทย · prompt เป็นภาษาอังกฤษเพื่อให้ AI ทำงานแม่นที่สุด แต่สั่งให้ AI คุยกับเราเป็นภาษาไทย
 
 > **🙏 Credit:** ส่วนล้างทีวี (prompt 1) คือ **[CleanYourTV](https://github.com/Gathin23/cleanyourtv)** โดย
